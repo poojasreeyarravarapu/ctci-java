@@ -1,0 +1,16 @@
+Is Unique:
+
+Implement an algorithm to determine if a string has all unique characters. What if you
+cannot use additional data structures?
+
+Assuming all characters are lowercase characters from a to z.
+
+Test Cases:
+
+Example1:
+input: "abcdefg"
+output: true
+
+Example2:
+input: "hello"
+output: false
