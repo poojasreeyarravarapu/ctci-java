@@ -1,0 +1,45 @@
+Problem Statement (Q2 - Check Permutation)
+Given two strings, write a method to decide if one is a permutation of the other.
+(That means: they must contain the same characters with the same frequency, in any order.)
+
+
+Test Cases:
+
+Example1:
+inp1: "abcd"
+inp2: "abcc"
+output: false
+
+Example2:
+inp1: "triangle"
+inp2: "integral"
+output: true
+
+Example3:
+inp1: "aab"
+inp2: "abb"
+output: false
+
+
+Solutions possible:
+1. calc freq of 1 string and for other string -1 the freq and if <0 return false
+    tc: O(n)
+    sc: O(k) where k in no of unique characters in string
+2. same goes with taking int array of 128 size for ascii and 1st string ++ for second -- if <0 return false
+    tc: O(n)
+    sc: O(1) 128 is constant
+3. sort both strings and equate those
+    tc: O(nlogn) for sorting
+    sc: O(n) for charArray
+4. bit manipulation
+    tc: O(n)
+    sc: O(1)
+    Using bit manipulation:
+
+    aab → set: {a, b} → same bit pattern as
+
+    abb → set: {a, b}
+
+    But: they are not anagrams (frequencies differ)!
+
+    So bit manipulation fails in this case.
